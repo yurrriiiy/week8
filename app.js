@@ -46,7 +46,7 @@ export default (express, bodyParser, createReadStream, writeFileSync, crypto, ht
         })
     })
 
-    .get('/wordpress/*', (req, res) => {
+    .get('/wordpress/', (req, res) => {
         console.log('http://a0541646.xsph.ru/'+req.params[0]);
         res.header('Content-Type', 'application/json');
         void http.get('http://a0541646.xsph.ru/'+req.params[0], (r, buffer='') => {
